@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090d19" />
+  <title>For Dardoura 🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="stars" class="stars"></div>
+  <div class="grain"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <main id="app">
+    <!-- INTRO -->
+    <section id="intro" class="scene active">
+      <div class="intro-glow"></div>
+      <div class="mini-moon"></div>
+      <p class="eyebrow reveal">A little something for you</p>
+      <h1 class="hero-title"><span>Hey,</span> Dorra<span class="soft">...</span></h1>
+      <p class="hero-sub">I made something just for you.</p>
+      <button class="primary-btn" id="enterBtn">Enter <span>✦</span></button>
+      <button class="music-pill" id="musicBtn" aria-label="Toggle music">♪ <span>Music</span></button>
+      <p class="tiny-note">Best experienced with headphones ✨</p>
+    </section>
+
+    <!-- ROOM -->
+    <section id="room" class="scene">
+      <div class="room-wrap">
+        <div class="ceiling-glow"></div>
+
+        <div class="window" aria-hidden="true">
+          <div class="sky">
+            <div class="big-moon"></div>
+            <div class="window-star ws1"></div>
+            <div class="window-star ws2"></div>
+            <div class="window-star ws3"></div>
+            <div class="window-star ws4"></div>
+            <div class="cloud c1"></div>
+            <div class="cloud c2"></div>
+          </div>
+          <div class="curtain left"></div>
+          <div class="curtain right"></div>
+        </div>
+
+        <div class="shelf" aria-hidden="true">
+          <span>✦</span><span>♡</span><span>✦</span>
+        </div>
+
+        <button class="lamp hotspot" id="lamp" aria-label="Lamp">
+          <div class="lamp-light"></div>
+          <div class="lamp-shade"></div>
+          <div class="lamp-stem"></div>
+          <div class="lamp-base"></div>
+        </button>
+
+        <div class="plant" aria-hidden="true">
+          <div class="leaf leaf1"></div><div class="leaf leaf2"></div>
+          <div class="leaf leaf3"></div><div class="leaf leaf4"></div>
+          <div class="pot"></div>
+        </div>
+
+        <div class="table">
+          <div class="table-top"></div>
+          <div class="table-leg tl1"></div><div class="table-leg tl2"></div>
+
+          <button class="cake hotspot" id="cake" aria-label="Birthday cake">
+            <div class="cake-top"></div>
+            <div class="icing"></div>
+            <div class="cake-body"></div>
+            <div class="candle ca"><span class="flame"></span></div>
+            <div class="candle cb"><span class="flame"></span></div>
+            <div class="candle cc"><span class="flame"></span></div>
+          </button>
+
+          <button class="gift hotspot" id="gift" aria-label="Gift">
+            <div class="gift-lid"></div>
+            <div class="gift-box"></div>
+            <div class="gift-ribbon-v"></div>
+            <div class="gift-ribbon-h"></div>
+          </button>
+
+          <button class="card hotspot" id="card" aria-label="Birthday card">
+            <span>for<br>Dardoura</span>
+          </button>
+        </div>
+
+        <div class="balloons">
+          <button class="balloon b1" data-note="Keep smiling. It suits you.">●</button>
+          <button class="balloon b2" data-note="A tiny surprise for a special girl.">●</button>
+          <button class="balloon b3" data-note="You found a little secret. ✨">●</button>
+        </div>
+
+        <div class="room-copy">
+          <p class="eyebrow">welcome to your little world</p>
+          <h2>Happy Birthday,<br><em>Dardoura</em> <span>🤍</span></h2>
+          <p class="hint">Tap around. Some things are waiting for you.</p>
+        </div>
+
+        <div class="room-tip">✦ explore the room ✦</div>
+      </div>
+
+      <div id="toast" class="toast" aria-live="polite"></div>
+
+      <button class="next-btn" id="continueRoom">keep going <span>→</span></button>
+    </section>
+
+    <!-- CARD -->
+    <section id="cardScene" class="scene centered">
+      <div class="floating-sparkles"></div>
+      <div class="letter">
+        <p class="eyebrow">a tiny note</p>
+        <h2>Happy Birthday, Dardoura 🤍</h2>
+        <p class="letter-text">
+          Today is your day.<br><br>
+          So I wanted to make a tiny world that exists just for a little while —
+          just to make you smile.
+        </p>
+        <button class="ghost-btn" id="cardNext">open the next chapter →</button>
+      </div>
+    </section>
+
+    <!-- NOTES -->
+    <section id="notes" class="scene centered">
+      <p class="eyebrow">a few little things</p>
+      <h2 class="section-title">Open them slowly.</h2>
+      <div class="note-grid">
+        <button class="note" data-message="You deserve more good days than bad ones. 🤍"><span>01</span><b>open me</b></button>
+        <button class="note" data-message="Your smile is probably more powerful than you think."><span>02</span><b>open me</b></button>
+        <button class="note" data-message="Some people make ordinary moments feel special."><span>03</span><b>open me</b></button>
+        <button class="note" data-message="You're one of those people. ✦"><span>04</span><b>open me</b></button>
+      </div>
+      <p id="noteResult" class="note-result"></p>
+      <button class="ghost-btn hidden" id="notesNext">there's more →</button>
+    </section>
+
+    <!-- QUESTION -->
+    <section id="question" class="scene centered">
+      <div class="question-orb">♡</div>
+      <p class="eyebrow">one little question</p>
+      <h2 class="question-title">Do you know how special you are?</h2>
+      <div class="choice-row">
+        <button class="choice" data-choice="yes">Of course 🤍</button>
+        <button class="choice" data-choice="maybe">Maybe...</button>
+      </div>
+      <p id="answer" class="answer"></p>
+      <button class="ghost-btn hidden" id="questionNext">I have something else →</button>
+    </section>
+
+    <!-- CAKE -->
+    <section id="cakeScene" class="scene centered dark-scene">
+      <div class="cake-big-wrap">
+        <div class="cake-shadow"></div>
+        <div class="cake-big">
+          <div class="tier tier-bottom"></div>
+          <div class="tier tier-top"></div>
+          <div class="drip d1"></div><div class="drip d2"></div><div class="drip d3"></div><div class="drip d4"></div>
+          <div class="cake-candle one"><span class="flame-big"></span></div>
+          <div class="cake-candle two"><span class="flame-big"></span></div>
+          <div class="cake-candle three"><span class="flame-big"></span></div>
+        </div>
+      </div>
+      <p class="eyebrow">make a wish</p>
+      <h2 class="cake-title">Take your time, Dardoura.</h2>
+      <p class="soft-copy">Close your eyes for a second. Think of something you really want.</p>
+      <button class="primary-btn" id="wishBtn">Make a wish <span>✦</span></button>
+      <p id="wishText" class="wish-text"></p>
+    </section>
+
+    <!-- GIFT -->
+    <section id="giftScene" class="scene centered dark-scene">
+      <p class="eyebrow">one more thing</p>
+      <h2 class="section-title">You thought that was it?</h2>
+
+      <button class="gift-big hotspot" id="giftBig" aria-label="Open gift">
+        <div class="gift-big-lid"></div>
+        <div class="gift-big-box"></div>
+        <div class="gift-big-ribbon-v"></div>
+        <div class="gift-big-ribbon-h"></div>
+        <div class="gift-spark">✦</div>
+      </button>
+
+      <p class="gift-hint" id="giftHint">Open the gift.</p>
+
+      <div id="giftMessage" class="gift-message hidden">
+        <div class="gift-light"></div>
+        <p class="eyebrow">inside the little box</p>
+        <p>Your real gift isn't inside this box...</p>
+        <p class="small">It's all the beautiful moments still waiting to happen. 🤍</p>
+        <button class="ghost-btn" id="giftNext">one last thing →</button>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="finalScene" class="scene centered final-scene">
+      <div class="final-moon"></div>
+      <div class="final-stars"></div>
+      <p class="eyebrow fade-late">for my Dardoura 🤍</p>
+      <h2 class="final-title">Happy Birthday.</h2>
+
+      <div class="final-letter" id="finalLetter">
+        <p>Happy Birthday, Dardoura.</p>
+        <p>I hope this year is kind to you.</p>
+        <p>I hope you laugh more, smile more, dream bigger, and find little reasons to be happy even on ordinary days.</p>
+        <p>You deserve beautiful moments.</p>
+        <p>And I hope this little surprise gave you one of them.</p>
+        <p>Stay exactly as beautiful as you are. 🤍</p>
+      </div>
+
+      <div class="ending hidden" id="ending">
+        <p>Made especially for you.</p>
+        <small>— a tiny birthday world for Dardoura ✦</small>
+        <button class="ghost-btn" id="replayBtn">start again ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <p class="eyebrow">a little secret</p>
+      <h3 id="modalText"></h3>
+    </div>
+  </div>
+
+  <audio id="bgMusic" loop preload="none" src="assets/music.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
